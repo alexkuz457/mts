@@ -1,5 +1,5 @@
 #имя базового образа
-FROM golang:latest
+FROM golang:1.12.9-alpine
 
 #создаем папку, где будет наша программа
 RUN mkdir -p /go/src/app
