@@ -3,15 +3,15 @@
 FROM golang
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/golang/example/outyet
+ADD . /go/src/github.com/alexkuz457/mts
 
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/golang/example/outyet
+RUN go install github.com/golang/alexkuz457/mts
 
 # Run the outyet command by default when the container starts.
-ENTRYPOINT /go/bin/outyet
+ENTRYPOINT /go/bin/mts
 
 # Document that the service listens on port 8080.
 EXPOSE 9000
